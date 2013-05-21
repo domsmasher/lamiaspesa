@@ -1,0 +1,32 @@
+@mixin sexy-border($color) {
+  .#{nth($color, 1)} {
+    &.low {
+      border-right: {
+        color: #{nth($color, 2)};
+        width: 10px;
+        style: solid;
+      }
+      .checkbox-container {
+        border-right: {
+          color: #{nth($color, 2)};
+          width: 3px;
+          style: solid;
+        }
+      }
+    }
+    &.high {
+      border-right: {
+        color: #{nth($color, 3)};
+        width: 10px;
+        style: solid;
+      }
+      .checkbox-container {
+        border-right: {
+          color: #{nth($color, 3)};
+          width: 3px;
+          style: solid;
+        }
+      }
+    }
+  }
+}

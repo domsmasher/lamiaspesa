@@ -65,3 +65,10 @@ $subheader-font-color: lighten($header-font-color, 30%);
 $subheader-font-weight: 300;
 $subheader-top-margin: .2em;
 $subheader-bottom-margin: .5em;
+
+$colors: (
+  fish #2980B9 #3498DB,
+  meat #C0392B #E74C3C,
+  vegetables #27AE60 #2ECC71,
+  cleaning #2C3E50 #34495E
+);
