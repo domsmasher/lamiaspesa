@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    div.container
+        div.row
+            div.span12
+                h1= title
+                -if (okTitle)
+                    div.alert.alert-success
+                        h1= okTitle
+                            p
+                                | L'elemento è stato aggiunto!
+                                i.icon-thumbs-up
+                form.form(method="post")
+                    fieldset
+                        legend Dati ricetta
+                    div.row
+                        div.span5
+                            div.control-group
+                                label.control-label(for='name') Name
+                                div.controls
+                                    input#title.input-block-level(type='text', name='name', required)
+                            div.control-group
+                                label.control-label(for='area') Category
+                                div.controls
+                                    select#category.input-block-level(name='area', required)
+                                        option
+                                        option(value="fish") Fish
+                                        option(value="meat") Meat
+                                        option(value="vegetables") Vegetables
+                                        option(value="cleaning") Cleaning
+                            div.control-group
+                                label.control-label(for='priority') Priority
+                                div.controls
+                                    select#category.input-block-level(name='priority', required)
+                                        option
+                                            option(value="low") Low
+                                            option(value="high") High
+                            div.control-group
+                                label.control-label(for='shop') Shop
+                                div.controls
+                                    select#category.input-block-level(name='shop', required)
+                                        option
+                                            option(value="M&S") M&S
+                                            option(value="Wholefood Market") Wholefood Market
+                                            option(value="Tesco") Tesco
+                    div.form-actions
+                        button(type='submit', class='btn btn-primary') Save

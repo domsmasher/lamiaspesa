@@ -6,7 +6,7 @@
 var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
-  , shopItem = require('shop_item')
+  , shopItem = require('./routes/shop_item')
   , path = require('path');
 
 var app = express();
@@ -29,7 +29,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/users', user.list);
+//app.get('/users', user.list);
+app.get('/login/', user.login);
+app.post('/login/', user.access);
+app.get('/new-item/', shopItem.newItem);
+app.post('/new-item/', shopItem.saveItem);
+app.get('/lists', shopItem.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

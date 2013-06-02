@@ -16,11 +16,15 @@ App.ListRoute = Ember.Route.extend({
     }
 });
 
-App.ListController = Ember.ArrayController.extend();
+App.ListController = Ember.ArrayController.extend({
+    toggleProperty: function(){
+        console.log(this.get('store').toString())
+    }
+});
 
 App.Store = DS.Store.extend({
     revision: 12,
-    adapter: 'DS.FixtureAdapter'
+    adapter: 'DS.RESTAdapter'
 });
 
 App.List = DS.Model.extend({

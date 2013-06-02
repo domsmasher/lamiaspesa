@@ -1,7 +1,16 @@
 doctype 5
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title= title
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+    body
+        block header
+            header
+                div.navbar
+                    div.navbar-inner
+                        a.brand(href="/") Hotchpotch
+                        ul.nav
+                            li: a(href="/new-recipe/") New recipe
+                            li: a(href="/recipe-list/") Recipe list
+                            li: a(href="/logout/") Logout
+        block content

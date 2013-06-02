@@ -6,6 +6,11 @@
         width: 10px;
         style: solid;
       }
+      border-left: {
+        color: #{nth($color, 2)};
+        width: 3px;
+        style: solid;
+      }
       .checkbox-container {
         border-right: {
           color: #{nth($color, 2)};
@@ -18,6 +23,11 @@
       border-right: {
         color: #{nth($color, 3)};
         width: 10px;
+        style: solid;
+      }
+      border-left: {
+        color: #{nth($color, 3)};
+        width: 3px;
         style: solid;
       }
       .checkbox-container {

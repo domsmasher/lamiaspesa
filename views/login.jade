@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	#login-container
+		form( method="post")#login-form.well.span4.offset4
+			h1= title
+			p.subheading #{subheading}
+			label Username 
+			input(type="text", name="user", id='user-tf', required).span4.required
+			label Password
+			input(type="password", name="pass", id='pass-tf', required).span4.required
+			button(type="submit")#btn-login.btn.btn-primary
+				i.icon-lock.icon-white
+				|          Sign in

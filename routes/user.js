@@ -32,7 +32,7 @@ exports.access = function (req, res) {
             res.send(e, 400);
         } else {
             req.session.user = o;
-            res.redirect('/shop-items-list/');
+            res.redirect('/new-item/');
         }
     });
 };
